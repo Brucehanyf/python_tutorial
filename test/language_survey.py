@@ -1,0 +1,18 @@
+from test.survey import AnonymousSurvey
+
+# 定义一个问题
+question = "what's your favorite english ? "
+my_survey = AnonymousSurvey(question)
+
+# 显示问题并存储答案
+my_survey.show_question()
+print("enter 'Q' at any time to quit\n")
+while True:
+    response = input('Language: ')
+    if response == 'Q':
+        break
+    my_survey.store_response(response)
+
+# 显示调查结果
+print("\nthank you to everyone who participated in the survey!")
+my_survey.show_results()

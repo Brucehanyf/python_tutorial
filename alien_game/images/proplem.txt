@@ -1,0 +1,6 @@
+self.bullet_color = 60,60,60  这个是什么语法
+
+# 删除已经消失的子弹
+for bullet in bullets.copy():
+    if bullet.rect.bottom <= 0:
+        bullets.remove(bullet)
